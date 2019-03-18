@@ -36,7 +36,7 @@ h1 {
 
   margin-top: 0;
   padding-bottom: 2%;
-  font-size: 150%;
+  font-size: 140%;
   line-height: 2;
   border-bottom: 3px solid #dddddd;
 }
@@ -56,6 +56,7 @@ h3 {
   color: #ffffff;
   background: #ffffff;
   border-bottom: 2px solid #cccccc;
+  vertical-align: middle;
 }
 
 #myName {
@@ -63,9 +64,9 @@ h3 {
   padding-left: 3%;
   padding-right: 3%;
   font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 170%;
+  font-size: 160%;
   font-weight: bold;
-  line-height: 3.2;
+  line-height: 3;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
@@ -78,7 +79,7 @@ h3 {
 
 nav {
   float: right;
-  margin-top: 30px;
+  margin-top: 26px;
 }
 
 nav a {
@@ -109,7 +110,6 @@ nav a:hover {
   width: 100%;
   padding: 3%;
   margin: 0;
-  margin-bottom: 20%;
   background: #ffffff;
   border: 1px solid #dddddd;
   overflow: auto;
@@ -130,13 +130,13 @@ footer {
   padding-top: 2%;
   padding-bottom: 3%;
   clear: both;
-  font-size: 75%;
+  font-size: 80%;
   color: #ffffff;
   color: #cccccc;
   text-align: center;
   background: #666666;
   border-top: 8px solid #4aaaa5;
-  height: 50px;
+  height: 8%;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -144,26 +144,30 @@ footer {
 }
 
 /* portfolio page */
-
+.imgContainer {
+  text-align: center;
+}
+.imgDiv {
+  display: inline-block;
+  width: 350px;
+  padding: 0;
+  margin: 2%;
+  vertical-align: middle;
+}
 .imgbox {
   position: relative;
-  float: left;
-  width: 35%;
-  margin-top: 2%;
-  margin-bottom: 3%;
-  margin-left: 0;
-  margin-right: 4%;
+  display: inline-block;
+  width: inherit;
+  vertical-align: middle;
   overflow: auto;
 }
 .imgbox a {
-  -webkit-filter: opacity(80%);
-  filter: opacity(80%);
   text-decoration: none;
 }
 
 .imgbox a:hover {
-  -webkit-filter: opacity(50%);
-  filter: opacity(50%);
+  -webkit-filter: opacity(80%);
+  filter: opacity(80%);
 }
 
 .imgbox a:active {
@@ -172,7 +176,6 @@ footer {
 }
 .imgbox img {
   width: 100%;
-  border: 0 none;
 }
 
 .imgbox h3 {
@@ -188,44 +191,16 @@ footer {
     background: #4aaaa5;
     border-bottom: 0;
 }
+ .gitLink {
+    display: inline-block;
+    width: inherit;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+}
 
 /* contact page */
 
-#contact-form ul, li {
-  margin-bottom: 2%;
-}
-
-label,
-input[type=text],
-input[type=email],
-textarea {
-  display: block;
-  width: 100%;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-  height: 35px;
-  padding: 0;
-  padding-left: 1%;
-  padding-right: 1%;
-  font-size: 90%;
-  border: 1px solid #dddddd;
-}
-
-textarea {
-  height: 200px;
-}
-
-input[type=submit] {
-  padding: 10px 20px;
-  font-size: 100%;
-  color: #ffffff;
-  cursor: pointer;
-  background: #4aaaa5;
-  border: 0 none;
-}
 
 /*media queries*/
 
@@ -249,9 +224,12 @@ width: 25%;
   .myPic {
   width: 35%;
 }
-  .imgbox {
-    width: 40%;
-  } 
+  .imgDiv {
+  display: inline-block;
+  width: 350px;
+  padding: 0;
+  margin: 2%;
+}
 }
 
 /*sm screen*/
@@ -260,6 +238,10 @@ width: 25%;
   #main-container {
     max-width: 580px;
   }
+
+  .main-section {
+  margin-bottom: 20%; 
+}
   .myPic {
     width: 100%;
     margin-top: 2%;
@@ -277,15 +259,19 @@ width: 25%;
     margin-top: 0;
 }
 
+.imgDiv {
+  display: inline-block;
+  width: 100%;
+}
+
 .imgbox {
-    width: 100%;
+    width: inherit;
     margin-top: 3%;
-    margin-right: 0;
 }
 
 .imgbox h3 {
     bottom: 7%;
-    width: 100%;
+    width: inherit;
     padding: 3%;
     margin-top: 0;
 }
